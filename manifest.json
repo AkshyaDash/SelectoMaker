@@ -1,0 +1,29 @@
+{
+ "key": "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDvVUr8oqLs7R4R3P85l5YtSN/d/zFWZXnclo7Tsniw/RgavG2u/XDmDBj/HvkPKpQfciWsP6qPxq7D4eS9bhW9VZd/wI0OF79k7p5LqUYHBi1xSDEp1bXranx30Ir9JBt7kUn5KZ9EM/DR8ghXvKEIGS5w/3mL2+FeYJmefurGLwIDAQAB",
+  "manifest_version": 2,
+  "name": "JQuery DOM selector",
+  "version": "1.0",
+  "description": "Double click the DOM element to know the possible JQuery selectors",
+    "background": {
+	    "scripts": ["background.js"],
+	    "persistent": false
+	  },
+  "browser_action": {
+    "default_title": "JQuery DOM selector",
+    "icons": ["icon.png"],
+    "default_icon": "icon.png"
+	
+  },
+  "permissions": [
+         "tabs",
+        "notifications",
+        "http://*/",
+        "https://*/"
+    ],
+  "content_scripts": [ {
+    "css": ["selectorStyle.css"],
+    "js": [ "jquery-1.10.2.min.js" ],
+    "matches": [ "http://*/*", "https://*/*"]
+	
+  }]
+}

@@ -1,0 +1,76 @@
+
+
+/*custom font for text*/
+@import url(http://fonts.googleapis.com/css?family=Nunito);
+@import url(http://thecodeplayer.com/uploads/fonts/fontawesome/css/font-awesome.min.css);
+
+/*Basic reset*/
+* {margin: 0; padding: 0;}
+
+#divContent {
+	background: rgb(95, 101, 245);
+	width: 50%;
+	height: 21%;
+	overflow: auto;
+	/*margin: 100px auto 0 auto;*/
+	position: fixed;
+        top: 80%;
+        bottom: 0px;
+        right: 0px;
+		left: 0px;
+	color: white;
+	/*Some cool shadow and glow effect*/
+	box-shadow: 
+		0 5px 15px 1px rgba(0, 0, 0, 0.6), 
+		0 0 200px 1px rgba(255, 255, 255, 0.5);
+}
+/*heading styles*/
+#divContent h3 {
+	font-size: 12px;
+	line-height: 20px;
+	padding: 0 10px;
+	cursor: pointer;
+	/*fallback for browsers not supporting gradients*/
+	background: #003040; 
+	background: linear-gradient(#003040, #002535);
+}
+/*heading hover effect*/
+#divContent h3:hover {
+	text-shadow: 0 0 8px rgba(255, 255, 255, 0.7);
+}
+/*iconfont styles*/
+#divContent h3 span {
+	font-size: 16px;
+	margin-right: 10px;
+}
+/*list items*/
+#divContent li {
+	list-style-type: none;
+}
+/*links*/
+#divContent table tr td{
+	color: white;
+	text-decoration: none;
+	font-size: 14px;
+	line-height: 25px;
+	display: block;
+	/*padding: 0 15px;*/
+	/*transition for smooth hover animation*/
+	transition: all 0.15s;
+}
+/*hover effect on links*/
+#divContent table td:hover {
+	background: #003545;
+	border-left: 2px solid lightgreen;
+}
+/*Lets hide the non active LIs by default*/
+#divContent ul ul {
+	display: none;
+}
+#divContent ul  {
+	position:static;
+}
+#divContent li.active ul {
+	display: block;
+}
+
